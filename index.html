@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trái Tim HN</title>
+    <style>
+        body {
+            background-color: #fdf6f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .heart {
+            width: 120px;
+            height: 120px;
+            background-color: #ff4b5c;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: softBeat 1.5s infinite ease-in-out;
+            box-shadow: 0 0 20px #ff4b5c88;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            width: 120px;
+            height: 120px;
+            background-color: #ff4b5c;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -60px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 60px;
+        }
+
+        @keyframes softBeat {
+            0% { transform: scale(1) rotate(-45deg); box-shadow: 0 0 15px #ff4b5c88; }
+            30% { transform: scale(1.1) rotate(-45deg); box-shadow: 0 0 25px #ff4b5caa; }
+            50% { transform: scale(1.15) rotate(-45deg); box-shadow: 0 0 30px #ff4b5caa; }
+            70% { transform: scale(1.1) rotate(-45deg); box-shadow: 0 0 25px #ff4b5c88; }
+            100% { transform: scale(1) rotate(-45deg); box-shadow: 0 0 15px #ff4b5c88; }
+        }
+
+        h1 {
+            color: #ff4b5c;
+            margin-bottom: 40px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>heart</h1>
+    <div class="heart"></div>
+    <p>“Tim tớ đã đập vì cậu từ lâu rồi…”</p>
+
+</body>
+</html>
